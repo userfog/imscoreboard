@@ -101,7 +101,6 @@ function main(data){
 	
 	var container = $("#container");
 	$.each(obs, function(i, val){
-		s = val.house + ".gif";
 		bkg = val.house + "_bkgrd.jpg"
 		var el ='<section style="background: url('+ bkg +') fixed; background-size: cover; background-repeat: no-repeat;">' +
 					'<div id="'+ val.house +'" class="houseContainer">' +
