@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Scoreboard</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="bigtext.js"></script>
+<script type="text/javascript" src="jquery.fittext.js"></script>
+<script type="text/javascript" src="nprogress.js"></script>
+<script type="text/javascript" src="script.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="nprogress.css"/>
+</head>
+<body>
+	<script type="text/javascript">
+		NProgress.start();
+		$(window).load(function(){
+			$('img').load(function() {
+	       		NProgress.inc();
+			});
+			NProgress.done();
+		});
+	</script>
+	<div align="center">
+		<div id="iso"></div>
+		<div id="bigtext">
+	    	<span id="title">Scoreboard</span>
+	  	</div>
+	  	<div id="container"></div>
+  	</div>
+</body>
+</html>

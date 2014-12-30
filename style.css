@@ -1,0 +1,54 @@
+html{
+	height: 100%;
+}
+
+body{
+	background: #FFF;
+	margin:0px;
+	font-family: Arial;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+a{
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+
+#iso{
+	margin-top: 15px;
+	width: 100%;
+}
+#title{
+	font-weight: bolder;
+	/*margin-bottom: 15px;*/
+}
+
+section{
+	height:60vh;
+	margin:0px;
+	position: relative;
+	background-size: cover;
+}
+
+div.houseContainer{
+	text-align: center;
+	height: 80%;
+	width: 100%;
+}
+
+span.houseInfo{
+	text-align: center;
+	display: inline-block;
+	color: #FFF;
+	background: rgba(136,136,136,.4);
+	text-shadow: 0 0 1px #000;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+
