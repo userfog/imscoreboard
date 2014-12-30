@@ -1,0 +1,1 @@
+IM Scoreboard is an app for seeing the current standings for Harvard Intramurals
