@@ -109,9 +109,10 @@ function main(data){
 				'</section>';
 		container.append(el);
 	});
+
 	snap_to_section();
 	jQuery(".houseContainer").fitText(1.2, { maxFontSize: '90px' });
-
+	
 }
 // Build Dom
 function setup(){
