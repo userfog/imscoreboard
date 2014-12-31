@@ -153,7 +153,7 @@ function main(data){
 // Build Dom
 function setup(){
 	$.support.cors = true;
-	var source = "http://spreadsheets.google.com/tq?tqx=out:csv&tq=select *&key=0AgMRIqC2ExQudHAyX0sycXdac2dxb0pWSTlndS1RRGc";
+	var source = "https://spreadsheets.google.com/tq?tqx=out:csv&tq=select *&key=0AgMRIqC2ExQudHAyX0sycXdac2dxb0pWSTlndS1RRGc";
 	makeCorsRequest(source);
 	$('#bigtext').fitText(.65, { maxFontSize: '120px' });
 }
