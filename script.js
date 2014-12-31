@@ -129,15 +129,15 @@ function main(data){
 	var iso = $("#iso");
 
 	$.each(obs, function(i, val){
-		s = val.house + " (Mobile).gif";
-		var el = '<a href="#'+ val.house +'"><img height="60" width="50" src='+ '"' + s + '"' +'></a>'
+		s = val.house + ".png";
+		var el = '<a href="#'+ val.house +'"><img height="60" width="60" src='+ '"' + s + '"' +'></a>'
 		iso.append(el);
 	});
 
 	
 	var container = $("#container");
 	$.each(obs, function(i, val){
-		bkg = val.house + "_bkgrd.jpg"
+		bkg = "rsz_" + val.house + "_bkgrd.jpg"
 		var el ='<section style="background: url('+ bkg +') fixed; background-size: cover; background-repeat: no-repeat;">' +
 					'<div id="'+ val.house +'" class="houseContainer">' +
 						'<span class="houseInfo">' + val.house + '</br>' + val.total + '</span>' +
