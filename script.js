@@ -93,19 +93,6 @@ function snap_to_section(){
 			up();
 		}
 	});
-	// window.addEventListener('scroll', function(){
-	// 	var st = $(window).scrollTop();
-	// 	console.log(st);
-	// 	if(st>app.lastScrollTop){
-	// 		console.log("Scroll Down");
-
-	// 	}
-	// 	else{
-	// 		console.log("Scroll Up");
-			
-	// 	}
-	// 	app.lastScrollTop = st;
-	// });
 }
 
 // Convert Data to list of objects
