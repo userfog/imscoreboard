@@ -142,10 +142,14 @@ function main(data){
 
 	snap_to_section();
 	jQuery(".houseContainer").fitText(1.2, { maxFontSize: '90px' });
+	setTimeout(function(){
+		NProgress.done();
+	}, 2000);
 	
 }
 // Build Dom
 function setup(){
+	NProgress.start();
 	$.support.cors = true;
 	var source = "https://spreadsheets.google.com/tq?tqx=out:csv&tq=select *&key=0AgMRIqC2ExQudHAyX0sycXdac2dxb0pWSTlndS1RRGc";
 	makeCorsRequest(source);
