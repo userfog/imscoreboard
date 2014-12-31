@@ -137,13 +137,20 @@ function main(data){
 	
 	var container = $("#container");
 	$.each(obs, function(i, val){
-		bkg = "rsz_" + val.house + "_bkgrd.jpg"
-		var el ='<section style="background: url('+ bkg +') fixed; background-size: cover; background-repeat: no-repeat;">' +
-					'<div id="'+ val.house +'" class="houseContainer">' +
+		
+		var el ='<section id="'+ val.house +'">' +
+					'<div class="houseContainer">' +
 						'<span class="houseInfo">' + val.house + '</br>' + val.total + '</span>' +
 					'</div>' +
 				'</section>';
 		container.append(el);
+	});
+
+
+	$.each(obs, function(i,val){
+		bkg = "rsz_" + val.house + "_bkgrd.jpg"
+		var selector = "#" + val.house;
+		$(selector).backstretch(bkg);
 	});
 
 	snap_to_section();
