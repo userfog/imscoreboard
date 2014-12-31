@@ -130,7 +130,7 @@ function main(data){
 
 	$.each(obs, function(i, val){
 		s = val.house + ".png";
-		var el = '<a href="#'+ val.house +'"><img height="60" width="60" src='+ '"' + s + '"' +'></a>'
+		var el = '<a href="#'+ val.house +'"><img height="60" width="47" src='+ '"' + s + '"' +'></a>'
 		iso.append(el);
 	});
 
