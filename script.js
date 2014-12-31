@@ -12,6 +12,42 @@ var app = {
 	}
 };
 
+function createCORSRequest(method, url) {
+  var xhr = new XMLHttpRequest();
+  if ("withCredentials" in xhr) {
+    // XHR for Chrome/Firefox/Opera/Safari.
+    xhr.open(method, url, true);
+  } else if (typeof XDomainRequest != "undefined") {
+    // XDomainRequest for IE.
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+  } else {
+    // CORS not supported.
+    xhr = null;
+  }
+  return xhr;
+}
+
+// Make the actual CORS request.
+function makeCorsRequest(source) {
+  var xhr = createCORSRequest('GET', source);
+  if (!xhr) {
+    alert('CORS not supported');
+    return;
+  }
+  // Response handlers.
+  xhr.onload = function() {
+    var text = xhr.responseText;
+    main(text);
+  };
+
+  xhr.onerror = function() {
+    alert('Woops, there was an error making the request.');
+  };
+
+  xhr.send();
+}
+
 // Convert a given row to an object
 function convert_row(headers, row){
 	var d = {};
@@ -116,8 +152,9 @@ function main(data){
 }
 // Build Dom
 function setup(){
+	$.support.cors = true;
 	var source = "http://spreadsheets.google.com/tq?tqx=out:csv&tq=select *&key=0AgMRIqC2ExQudHAyX0sycXdac2dxb0pWSTlndS1RRGc";
-	$.get(source, main);
+	makeCorsRequest(source);
 	$('#bigtext').fitText(.65, { maxFontSize: '120px' });
 }
 // Get the data from the Google Doc
