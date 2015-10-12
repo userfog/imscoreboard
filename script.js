@@ -151,7 +151,7 @@ function main(data){
 function setup(){
 	NProgress.start();
 	$.support.cors = true;
-	var source = "https://spreadsheets.google.com/tq?tqx=out:csv&tq=select *&key=0AgMRIqC2ExQudHAyX0sycXdac2dxb0pWSTlndS1RRGc";
+	var source = "https://docs.google.com/spreadsheets/d/1DwrxD-JTCQG4zuQgAVVma4E-K6DrYECyl25ZzrkI0ww";
 	makeCorsRequest(source);
 	$('#bigtext').fitText(.65, { maxFontSize: '120px' });
 }
